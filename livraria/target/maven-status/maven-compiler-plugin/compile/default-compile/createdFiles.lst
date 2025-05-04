@@ -1,0 +1,6 @@
+br\unipar\programacaoweb\library\model\Autor.class
+br\unipar\programacaoweb\library\service\LivroService.class
+br\unipar\programacaoweb\library\controller\LivroController.class
+br\unipar\programacaoweb\library\model\Livro.class
+br\unipar\programacaoweb\library\LibraryApplication.class
+br\unipar\programacaoweb\library\repository\LivroRepository.class
