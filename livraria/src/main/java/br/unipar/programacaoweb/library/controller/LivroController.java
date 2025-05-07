@@ -2,6 +2,7 @@ package br.unipar.programacaoweb.library.controller;
 
 import br.unipar.programacaoweb.library.model.Livro;
 import br.unipar.programacaoweb.library.service.LivroService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -67,7 +68,7 @@ public class LivroController {
     @PostMapping("/salvar")
     public ResponseEntity<Livro> salvarLivro(@RequestBody Livro livro) {
         Livro criado = livroService.salvar(livro);
-        return ResponseEntity.status(201).body(criado);
+        return ResponseEntity.status(HttpStatus.CREATED).body(criado);
     }
 
     @PutMapping("/editar/{id}")

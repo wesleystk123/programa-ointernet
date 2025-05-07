@@ -2,6 +2,7 @@ package br.unipar.programacaoweb.library.controller;
 
 import br.unipar.programacaoweb.library.model.Autor;
 import br.unipar.programacaoweb.library.service.AutorService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +37,7 @@ public class AutorController {
     @PostMapping("/salvar")
     public ResponseEntity<Autor> salvar(@RequestBody Autor autor) {
         Autor autorCriado = autorService.salvar(autor);
-        return ResponseEntity.status(201).body(autorCriado);
+        return ResponseEntity.status(HttpStatus.CREATED).body(autorCriado);
     }
 
     @PutMapping("/editar/{id}")
